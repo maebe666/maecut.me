@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>mæcut.me</title>
+<title>mae cut - video editor / animator</title>
 <style>
   /* Add your styles here */
   body {
@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+    text-transform: lowercase; /* Makes all text lowercase */
   }
   .navbar {
     display: flex;
@@ -30,12 +31,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px; /* Add padding around the content */
   }
-  /* Adjust video size to 1/4 */
   .video-wrapper {
-    width: 25%; /* Adjust width to a quarter of full width */
-    padding-bottom: 25%; /* Adjust height to maintain aspect ratio */
+    width: 50%; /* Adjust width to 50% for better visibility */
+    padding-top: 28.13%; /* Adjust height based on 16:9 aspect ratio */
     position: relative;
+    margin: 0 auto; /* Center video in the available space */
   }
   .video-wrapper iframe {
     position: absolute;
@@ -45,10 +47,19 @@
     height: 100%;
   }
   .info {
-    width: 100%; /* Full width */
     text-align: center; /* Center the text */
     padding: 20px;
     font-size: 1.25rem; /* Adjust font size as needed */
+  }
+  /* Responsive video sizing for smaller screens */
+  @media screen and (max-width: 600px) {
+    .video-wrapper {
+      width: 100%; /* Full width on small screens */
+      padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
+    }
+    .info {
+      font-size: 1rem; /* Smaller font size on small screens */
+    }
   }
 </style>
 </head>
@@ -61,7 +72,7 @@
 </div>
 <div class="main-content">
   <div class="info">
-    maebe wood<br>
+    mae cut<br>
     video editor / animator<br>
     15 years experience in film, tv, and commercials
   </div>
